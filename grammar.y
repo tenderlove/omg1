@@ -4,12 +4,12 @@ token A B
 
 rule
   match
-    : A
-    | A bs
+    : A    { result = [:A] }
+    | A bs { result = [:A, val[1]] }
     ;
   bs
-    : B
-    | B bs
+    : B    { result = [:B]; }
+    | B bs { result = [:B, val[1]] }
     ;
 
 end

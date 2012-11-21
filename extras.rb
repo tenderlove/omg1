@@ -1,6 +1,6 @@
 require 'strscan'
 
-class MyParser
+class MyParser < Racc::Parser
   class Tokenizer
     def initialize string
       @ss = StringScanner.new string
